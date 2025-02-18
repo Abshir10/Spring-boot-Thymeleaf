@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Listings</title>
+    <link rel="stylesheet" th:href="@{courses.css}">
+
+</head>
+<body>
+<header>
+    <h1>Available Courses</h1>
+    <p>Explore our wide range of courses to boost your skills!</p>
+</header>
+<main>
+    <section class="course-grid">
+        <div class="course-card">
+            <h2 id="courseTitle1">Web Development</h2>
+            <p>Learn the basics of web development with HTML, CSS, and JavaScript.</p>
+            <a href="#" class="enroll-button"  id="enroll-button1">Enroll Now</a>
+        </div>
+        <div class="course-card">
+            <h2 id="courseTitle2">Data Science</h2>
+            <p>Discover data analysis, visualization, and machine learning.</p>
+            <a href="#" class="enroll-button" id="enroll-button2">Enroll Now</a>
+        </div>
+        <div class="course-card">
+            <h2 id="courseTitle3">Graphic Design</h2>
+            <p>Unleash your creativity with graphic design principles and tools.</p>
+            <a href="#" class="enroll-button"  id="enroll-button3">Enroll Now</a>
+        </div>
+        <div class="course-card">
+
+            <h2 id="courseTitle4">Digital Marketing</h2>
+            <p>Master the art of online marketing and social media strategies.</p>
+            <a href="#" class="enroll-button" id="enroll-button4">Enroll Now</a>
+        </div>
+        <div class="course-card">
+            <h2 id="courseTitle5">Machine Learning</h2>
+            <p>Get hands-on experience with machine learning algorithms and applications.</p>
+            <a href="#" class="enroll-button" id="enroll-button5">Enroll Now</a>
+        </div>
+        <div class="course-card">
+            <h2 id="courseTitle6">Cybersecurity</h2>
+            <p>Learn about protecting systems and networks from cyber threats.</p>
+            <a href="#" class="enroll-button" id="enroll-button6">Enroll Now</a>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Course Listings. All Rights Reserved.</p>
+</footer>
+//here
+<div class="form-container">
+    <button type="button" class="close-btn" id="close-btn">✖</button>
+    <form action="#" th:action="@{/submit}" th:object="${mymodel}" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" th:field="*{name}" required>
+        <br>
+        <label for="courseName">Your Course:</label>
+        <input type="text" id="courseName" th:field="*{courseName}" required>
+        <br>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" th:field="*{email}" required>
+        <br>
+        <button type="submit" id="submit">Enroll</button>
+    </form>
+</div>
+//her
+
+<script> document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('enroll-button1').addEventListener('click', function(event) {
+
+                        event.preventDefault(); // Prevent default link behavior
+
+                        // Get the course title from the clicked button's parent
+                        const courseTitle = document.getElementById('courseTitle1').textContent;
+
+                        // Fill the course name input in the form
+                        document.getElementById('courseName').value = courseTitle;
+                        // Show the form
+                        document.querySelector('.form-container').style.visibility = 'visible';
+                    });
+
+
+
+                     document.getElementById('enroll-button2').addEventListener('click', function(event) {
+
+                        event.preventDefault(); // Prevent default link behavior
+
+                        // Get the course title from the clicked button's parent
+                        const courseTitle = document.getElementById('courseTitle2').textContent;
+
+                        // Fill the course name input in the form
+                        document.getElementById('courseName').value = courseTitle;
+                        // Show the form
+                        document.querySelector('.form-container').style.visibility = 'visible';
+                    });
+
+
+                     document.getElementById('enroll-button3').addEventListener('click', function(event) {
+
+                        event.preventDefault(); // Prevent default link behavior
+
+                        // Get the course title from the clicked button's parent
+                        const courseTitle = document.getElementById('courseTitle3').textContent;
+
+                        // Fill the course name input in the form
+                        document.getElementById('courseName').value = courseTitle;
+                        // Show the form
+                        document.querySelector('.form-container').style.visibility = 'visible';
+                    });
+
+
+                     document.getElementById('enroll-button4').addEventListener('click', function(event) {
+
+                        event.preventDefault(); // Prevent default link behavior
+
+                        // Get the course title from the clicked button's parent
+                        const courseTitle = document.getElementById('courseTitle4').textContent;
+
+                        // Fill the course name input in the form
+                        document.getElementById('courseName').value = courseTitle;
+                        // Show the form
+                        document.querySelector('.form-container').style.visibility = 'visible';
+                    });
+                     document.getElementById('enroll-button5').addEventListener('click', function(event) {
+
+                        event.preventDefault(); // Prevent default link behavior
+
+                        // Get the course title from the clicked button's parent
+                        const courseTitle = document.getElementById('courseTitle5').textContent;
+
+                        // Fill the course name input in the form
+                        document.getElementById('courseName').value = courseTitle;
+                        // Show the form
+                        document.querySelector('.form-container').style.visibility = 'visible';
+                    });
+
+                     document.getElementById('enroll-button6').addEventListener('click', function(event) {
+
+                        event.preventDefault(); // Prevent default link behavior
+
+                        // Get the course title from the clicked button's parent
+                        const courseTitle = document.getElementById('courseTitle5').textContent;
+
+                        // Fill the course name input in the form
+                        document.getElementById('courseName').value = courseTitle;
+                        // Show the form
+                        document.querySelector('.form-container').style.visibility = 'visible';
+                    });
+
+ document.getElementById('submit').addEventListener('click', function(event) {
+
+<!--                        event.preventDefault(); // Prevent default link behavior-->
+
+                        // Get the course title from the clicked button's parent
+                        const email = document.getElementById('email').value;
+                        const name = document.getElementById('name').value;
+                        const courseName = document.getElementById('courseName').value;
+                        console.log(name , email , courseName);
+
+
+                    });
+
+
+                     document.getElementById('close-btn').addEventListener('click', function(event) {
+
+                          document.querySelector('.form-container').style.visibility = 'hidden';
+
+                    });
+
+            });
+
+</script>
+</body>
+</html>

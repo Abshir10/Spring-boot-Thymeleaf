@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Name</title>
+    <link rel="stylesheet" th:href="@{homepage.css}">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1>University Name</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a th:href="@{/courses}">Programs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Welcome to University Name</h2>
+    <p>Your journey to excellence begins here.</p>
+    <a href="#admissions" class="btn">Apply Now</a>
+</section>
+
+<section id="about" class="info-section">
+    <h2>About Us</h2>
+    <p>We are committed to providing a transformative educational experience.</p>
+</section>
+
+<section id="admissions" class="info-section">
+    <h2>Admissions</h2>
+    <p>Join us to explore endless possibilities.</p>
+</section>
+
+<section id="programs" class="info-section">
+    <h2>Programs</h2>
+    <p>Discover a range of undergraduate and graduate programs.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 University Name. All rights reserved.</p>
+</footer>
+</body>
+</html>
