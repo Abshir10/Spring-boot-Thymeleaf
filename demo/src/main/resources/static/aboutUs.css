@@ -1,0 +1,61 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #003366;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 0;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Sections */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    color: #003366;
+    margin-top: 0;
+}
+
+/* Values List */
+.values-section ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.values-section li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    background: #ccc;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+}
